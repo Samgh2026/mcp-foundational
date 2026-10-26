@@ -179,13 +179,9 @@ Everything you just did is MCP in three moves. Say it to students like this:
 
 ---
 
-
-
 # Project 2 : Consuming a Market-Data Server We Didn't Build
 
-In Project 1 we **built** an MCP server (the claims assistant). 
-
-
+In Project 1 we **built** an MCP server (the claims assistant).
 
 In Project 2
 we do the opposite and more powerful thing: we **consume** a server that a

@@ -32,9 +32,9 @@
 #   To see it work, connect a client. The quickest client is the MCP
 #   Inspector (it launches the server for you):
 #
-#       npx @modelcontextprotocol/inspector python3 server.py
+#       npx @modelcontextprotocol/inspector python3 claims_server.py
 #
-#   (Do NOT use "mcp dev server.py" unless you have uv installed -- on a
+#   (Do NOT use "mcp dev claims_server.py" unless you have uv installed -- on a
 #   plain pip setup it fails. The npx command above launches with python3
 #   directly and avoids that.)
 #
@@ -47,7 +47,9 @@
 ##############################################################################
 
 
-from mcp.server.fastmcp import FastMCP
+from mcp.server.mcpserver import MCPServer, Context
+
+mcp = MCPServer("Claims Assistant")
 
 # The server contains no claims data of its own -- it only exposes the
 # tool. The knowledge lives in claims_data.py. We import the data lookup
@@ -59,7 +61,7 @@ from claims_data import get_claim_status as look_up_claim
 # CREATE THE SERVER
 # -------------------------------------------------------------
 
-mcp = FastMCP("claims-assistant")
+# mcp = FastMCP("claims-assistant")
 
 
 # -------------------------------------------------------------
